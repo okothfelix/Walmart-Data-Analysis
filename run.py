@@ -7,6 +7,7 @@ app = Flask(__name__)
 CORS(app, resources={r'*': {'origins': 'https://537f-197-232-122-151.ngrok-free.app'}})
 
 app.register_blueprint(analytics_bp, url_prefix='/')
+app.register_blueprint(analytics_bp, url_prefix='/analytics')
 app.register_blueprint(pos_bp, url_prefix='/pos')
 
 if __name__ == '__main__':
